@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face {
+  font-family: 'Kaisei HarunoUmi';
+  src: url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+}
+
+body {
+  margin: 0;
+  font-family: Kaisei HarunoUmi;
+  background-color: #F2E8C5;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #844341;
+}
+
+.logo {
+  float: left;
+  padding: 14px 16px;
+}
+
+.bottom {
+  background-color: #844341;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  float: left;
+  padding: 14px 16px;
+}
+
+.logo img {
+  width: 30px; /* Adjust the width to make the image smaller */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.topnav {
+  float: right; /* Float the top navigation to the right */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #3B2C2F;
+  color: white;
+}
+
+.contact-form {
+  margin: 20px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">
+    <img src="photo1.png" alt="Logo" href="Dashboard.html">
+  </div>
+  <div class="topnav">
+    <a href="Dashboard.html">HOMEPAGE</a>
+    <a href="Appointment.html">APPOINTMENT</a>
+    <a class="active" href="Contact Us.html">CONTACT US</a>
+    <a href="About Us.html">ABOUT US</a>
+    <a href="Login User.html">LOG OUT</a>
+  </div>
+</div>
+
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <label for="fax">Fax Number:</label>
+    <input type="tel" id="fax" name="fax" placeholder="Enter your fax number">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="bottom">
+    <div class="container">
+    </div>
+</div>
+
+</body>
+</html>

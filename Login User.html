@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Users</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500;600;700&family=Kanit:wght@100;300;400;600;700&family=Kavoon&family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #844341;
+    padding: 20px 20px 20px 20px;
+}
+
+.content{
+    position: absolute;
+    left: 70px;
+    top: 20px;
+    width: 90%;
+    background: #fff; 
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px 20px 20px;
+}
+
+.loginForm{
+    background: #f2e8c5;
+    width: 600px;
+    padding: 30px 30px 30px 30px ;
+    align-items: center;
+}
+
+
+.loginForm .loginHeader{
+    text-align: center;
+    font-family: "Kanit", sans-serif, Bold;
+    color: #cc1100;
+    font-size: 2.8rem;
+}
+
+.loginForm p{
+    position: relative;
+    left: 15px;
+    padding:  30px 10px 30px 10px ;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.7rem;
+    color: #3B2C2F;
+}
+
+.textarea{
+    position: relative;
+    left: 15px;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #f2e8c5;
+}
+
+#login{
+    cursor: pointer;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "Kanit", sans-serif, Bold;
+    background-color: #cc1100;
+    border: none;
+}
+
+
+.text{
+    position: absolute;
+    left: 660px;
+    top: 250px;
+    color: #493632;
+    font-family: "Kalnia", sans-serif;
+    font-size: 1.5rem;
+    box-shadow: #0000 10px;
+}
+
+@media (max-width: 490px){
+
+    body{
+        background: #844341;
+        padding: 20px 20px 20px 20px;
+    }
+    
+    .content{
+        position: absolute;
+        left: 70px;
+        top: 20px;
+        width: 90%;
+        background: #fff; 
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+    }
+    
+    .loginForm{
+        background: #f2e8c5;
+        width: 350px;
+        padding: 30px;
+        align-items: center;
+    }
+
+}
+
+.loginForm label {
+        font-size: 1.5rem;
+        font-family: "Kanit", sans-serif, Bold;
+        color: #3B2C2F;
+    }
+
+    .forgot-password {
+        font-size: 1.5rem;
+        font-family: "Kanit", sans-serif, Bold;
+        color: #3B2C2F;
+        text-decoration: none;
+        margin-top: 5px;
+        display: inline-block; /* Display the link inline with the checkbox */
+        margin-left: 10px; /* Add some space between the checkbox and the link */
+    }
+
+    .register-text {
+        margin-top: 20px;
+        text-align: center; /* Center-align the text */
+        font-size: 1.4rem;
+        color: #3B2C2F;
+    }
+
+.register-text a {
+    color: #3B2C2F;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    <div class="content">
+        <div class="text">
+            <h1>"Heroes come in all blood types."</h1>
+        </div>
+        <div class="loginForm">
+            <h1 class="loginHeader">LOGIN</h1>
+            <form>
+                <p>Username</p>
+                <input type="text" class="textarea" placeholder="Enter your username">
+                <p>Email</p>
+                <input type="email" class="textarea" placeholder="Enter your email">
+                <p>Password</p>
+                <input type="password" class="textarea" placeholder="Enter your password">
+                <br>
+                <label>
+                    <input type="checkbox">  Remember Me
+                </label>
+                </br>
+                <a href="#" class="forgot-password">Forgot my password</a>
+                <input type="submit" id="login" value="LOG IN">
+            </form>
+            <div class="register-text">
+                <p>Don't have an account? <a href="Register.html">Register now</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

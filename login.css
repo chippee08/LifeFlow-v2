@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500;600;700&family=Kanit:wght@100;300;400;600;700&family=Kavoon&family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #844341;
+    padding: 20px 20px 20px 20px;
+}
+
+.content{
+    position: absolute;
+    left: 70px;
+    top: 20px;
+    width: 90%;
+    background: #fff; 
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px 20px 20px;
+}
+
+.loginForm{
+    background: #f2e8c5;
+    width: 600px;
+    padding: 30px 30px 30px 30px ;
+    align-items: center;
+}
+
+
+.loginForm .loginHeader{
+    text-align: center;
+    font-family: "Kanit", sans-serif, Bold;
+    color: #cc1100;
+    font-size: 2.8rem;
+}
+
+.loginForm p{
+    position: relative;
+    left: 15px;
+    padding:  30px 10px 30px 10px ;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.7rem;
+    color: #3B2C2F;
+}
+
+.textarea{
+    position: relative;
+    left: 15px;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #f2e8c5;
+}
+
+#login{
+    cursor: pointer;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "Kanit", sans-serif, Bold;
+    background-color: #cc1100;
+    border: none;
+}
+.icon{
+    position: absolute;
+    left: 900px;
+    top: 50px;
+}
+
+.logo{
+    width: 120px;
+}
+
+.company_name{
+    position: absolute;
+    padding: 20px 0 0 0;
+    font-family: "Kavoon", sans-serif;
+    font-size: 1.9rem;
+    color: #493632;
+}
+
+.quote{
+    position: absolute;
+    left: 860px;
+    top: 250px;
+    color: #493632;
+    font-family: "Kalnia", sans-serif;
+    font-size: 1.5rem;
+    box-shadow: #0000 10px;
+}
+
+@media (max-width: 490px){
+
+    body{
+        background: #844341;
+        padding: 20px 20px 20px 20px;
+    }
+    
+    .content{
+        position: absolute;
+        left: 70px;
+        top: 20px;
+        width: 90%;
+        background: #fff; 
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+    }
+    
+    .loginForm{
+        background: #f2e8c5;
+        width: 350px;
+        padding: 30px;
+        align-items: center;
+    }
+
+}
+

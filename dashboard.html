@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="botscript.js" defer></script> 
+</head>
+<body>
+    <div class="content">
+        <div class="side">
+            <div class="icon">
+                <img src="small_Logo.png" alt="LifeFlow logo" title="LifeFlow" class="logo">
+                <h3 class="company_name">LifeFlow</h3>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><button onclick="dashboard()">Dashboard</button></li>
+                    <script src="boardScript.js"></script>
+                    <li><button onclick="AddBlood()">Add Blood</button></li>
+                    <script src="boardScript.js"></script>
+                    <li><button>Blood Inventory</button></li>
+                    <script src="boardScript.js"></script>
+                    <li><button onclick="AffHospi()">Affliated Hospitals</button></li>
+                    <script src="boardScript.js"></script>
+                    <li> <button class="drpBtn">Appointments<span id="expand" class="material-symbols-outlined">
+                        expand_more
+                        </span></button>
+                        <ul class="dropdown">
+                            <li><button class="drop-btn">Blood Requests</button></li>
+                            <script src="boardScript.js"></script>
+                            <li><button class="drop-btn">Blood Donations</button></li>      
+                            <script src="boardScript.js"></script>                               
+                        </ul> 
+                   </li>
+                    <span id="logout" class="material-symbols-outlined" title="Logout">logout</span>
+                </ul>
+            </div>
+        </div>
+
+        <!--For the dashboard part-->
+        <div id="dashbrd">
+            <!--for the clock-->
+            <div class="clock">
+                <div class="wrapper">
+                    <h2 id="hour">00</h2>
+                    <h2 class="dot">:</h2>
+                    <h2 id="minute">00</h2>
+                    <h2 class="dot">:</h2>
+                    <h2 id="seconds">00</h2>
+                    <span id="ampm">AM</span>
+                </div>
+            </div>
+            <script src="boardScript.js"></script>
+            <!--for the calendar-->
+            <div class="calendar">
+                <div class="header">
+                    <button id="prevBtn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="monthYear" id="monthYear"></div>
+                    <button id="nextBtn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>       
+                </div>
+                <div class="days">
+                    <div class="day">Mon</div>
+                    <div class="day">Tue</div>
+                    <div class="day">Wed</div>
+                    <div class="day">Th</div>
+                    <div class="day">Fri</div>
+                    <div class="day">Sat</div>
+                    <div class="day">Sun</div>
+                </div>
+                <div class="dates" id="dates"></div>
+            </div>
+            <div class="visits">
+                <div class="eye">
+                    <span class="material-symbols-outlined" id="eye">
+                        visibility
+                        </span>
+                </div>
+                <p>121</p>
+                <p>Daily Visits</p>           
+            </div>
+            <div class="dvisits">
+                <div class="group">
+                    <span class="material-symbols-outlined" id="group">
+                        groups
+                        </span>
+                </div>
+                <p>1245</p>
+                <p>No. of Visits</p>           
+            </div>
+            <div class="chart">
+                <img src="chart.png" alt="chart" class="percent">
+            </div>
+            <div class="avail">
+                <img src="avail-blood-perType.png" alt="chart" class="types">
+            </div>
+        </div>
+        <script src="calendar.js"></script>
+
+        <!--For the add blood part-->
+        <div id="addBld" style="display: none;">
+            <div class="addFrm">
+                <h1 class="text">ADD BLOOD</h1>
+                <div class="area">
+                    <form action="">
+                        <label for="hospitals">Hospital:</label>
+                        <select name="hospitals" id="hospi" required>
+                            <option>&lt;Select Hospital&gt;</option>
+                            <option value="mcmc">Mandaluyong Medical Center</option>
+                            <option value="hcmc">Health Cube Medical Center - Shaw</option>
+                            <option value="vrp">VRP Medical Center</option>
+                        </select>
+                    </form>
+                        <br>
+                    <form action="">
+                        <label for="blood type">Blood Type:</label>
+                        <select name="Blood Type" id="bldtype" required>
+                            <option>&lt;Select Blood Type&gt;</option>
+                            <option value="abpos">AB+</option>
+                            <option value="abneg">AB-</option>
+                            <option value="apos">A+</option>
+                            <option value="aneg">A-</option>
+                            <option value="bpos">B+</option>
+                            <option value="bneg">B-</option>
+                            <option value="opos">O+</option>
+                            <option value="oneg">O-</option>
+                        </select>
+                    </form>
+                    <form action="">
+                        <p>Quantity: <input type="number" class="quanti" required></p>
+                        <br>
+                        <input type="submit" class="submitbtn" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--For the affliated hospital part-->
+        <div id="affHospi" style="display: none;">
+            <div class="mcmc">
+                <h2>Mandaluyong City Medical Center</h2>
+                <p> <b>Located in:</b> Addition Hills Elementary School - Mandaluyong</p>
+                <p><b>Address:</b> <u>F. Martinez Ave, Mandaluyong, 1550 Metro Manila</u></p>
+                <p><b>Phone:</b> <u>(02) 8532 0480</u></p>
+                <button class="contactbtn1">Contact Now</button>
+            </div>
+            <div class="hcmc">
+                <h2>Health Cube Medical Clinics - Shaw</h2>
+                <p><b>Located in:</b> High Pointe Medical Club</p>
+                <p><b>Address:</b> <u>241 Shaw Blvd., Mandaluyong, 1552 Metro Manila</u></p>
+                <p><b>Phone:</b><u>(02) 8652 1111</u></p>
+                <button class="contactbtn2">Contact Now</button>
+            </div>
+            <div class="vrp">
+                <h2>VRP Medical Center</h2>
+                <p><b>Address:</b> <u>163 Epifanio de los Santos Ave, Mandaluyong, 1501</u></p>
+                <p><b>Phone:</b><u>(02) 8464 9999</u></p>
+                <button class="contactbtn3">Contact Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

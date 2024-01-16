@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500;600;700&family=Kanit:wght@100;300;400;600;700&family=Kavoon&family=KoHo:wght@200&family=Open+Sans:wght@300&display=swap');
+
+body{
+    background: #E2E2E2;
+    padding: 0;
+    margin: 0;
+
+}
+
+.side{
+    display: grid;
+    position: absolute;
+    background: #844341;
+    width: 340px;
+    height: 100%;
+}
+
+.icon{
+    position: relative;
+}
+
+.company_name{
+    position: relative;
+    left: 110px;
+    font-family: "Kavoon", sans-serif;
+    color: #F2E8C5;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.logo{
+    position: relative;
+    width: 100px;
+    left: 120px;
+    padding: 10px 0 0 0;
+    
+}
+
+.sidebar li{
+    display: grid;
+    position: relative;
+    right: 50px;
+}
+
+.sidebar button{
+    display: grid;
+    position: relative;
+    bottom: 80px;
+    width: 350px;
+    padding: 10px 5px 10px 5px;
+    font-family: "Koho", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #F2E8C5;
+    border: none;
+    background: #844341;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar #expand{
+    position: absolute;
+    right: 20px;
+    padding: 12px 5px 11px 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar #expand:hover{
+    transform: rotate(180deg);
+    transition: 0.5s;
+    color: #844341;
+}
+
+.sidebar button:hover{
+    background: #F2E8C5;
+    color:#844341;
+    transition: 0.5s;
+}
+
+.dropdown{
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul.dropdown{
+    opacity: 1;
+    top: 35px;
+    transition: 0.5s;
+    visibility: visible;
+}
+
+.dropdown li{
+    float: none;
+    width: 100%;
+}
+
+.dropdown .drop{
+    width: 360px;
+    background-color: #66443B; 
+}
+
+.sidebar #logout{
+    position: relative;
+    left: 100px;
+    top: 40px;
+    font-size: 2.5rem;
+    color: #F2E8C5;
+    cursor: pointer;
+}
+
+.sidebar #logout:hover{
+    color: #000;
+}
+
+.clock{
+    position: relative;
+    width: 550px;
+    height: 100px;
+    top: 20px;
+    left: 400px;
+    background: #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border-radius: 1px solid rgba(255,255,255,0.1);
+    z-index: 99;
+}
+
+.clock .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.clock .wrapper h2{
+    font-size: 2em;
+    color: #66443B;
+}
+
+.clock .wrapper h2:nth-child(odd){
+    border-radius: 10px;
+    margin: 0 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+#ampm{
+    position: relative;
+    font-size: 1em;
+    color: #66443B;
+    top: -10px;
+    font-weight: 700;
+}
+
+.calendar{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    left: 1000px;
+    top: -80px;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.monthYear{
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day{
+    text-align: center;
+    padding: 5px;
+    color: #999FA6;
+    font-weight: 500;
+}
+
+.dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+}
+
+.date:hover,
+.date.active{
+    background: #ff5869;
+    color: #fff;
+}
+
+.date.inactive{
+    color: #d2d2d2;
+}
+
+.date.inactive:hover{
+    color: #fff;
+}
+
+.visits{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    left: 400px;
+    bottom: 290px;
+    padding: 10px 0 0 0;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.eye{
+    position: relative;
+    left: 90px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    background: #cc1100;
+    color: #fff;
+}
+
+#eye{
+    position: relative;
+    top: 15px;
+    font-size: 3rem;
+}
+
+
+.visits p{
+    left: 75px;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.dvisits{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    left: 700px;
+    top: 130px;
+    padding: 10px 0 0 0;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.group{
+    position: relative;
+    left: 90px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    background: #66443B;
+    color: #fff;
+}
+
+#group{
+    position: relative;
+    top: 15px;
+    font-size: 3rem;
+}
+
+
+.dvisits p{
+    left: 75px;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+#addBld{
+    display: flex;
+    position: relative;
+    left: 550px;
+    top: 70px;
+    background-color: #F2E8C5;
+    width: 500px;
+    padding: 30px;
+    border: #000;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.chart{
+    position: absolute;
+    display: flex;
+    left: 400px;
+    bottom: 20px;
+}
+
+.chart .percent{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.avail{
+    position: absolute;
+    display: flex;
+    left: 700px;
+    bottom: 20px;
+}
+
+.avail .types{
+    width: 620px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.addFrm h1{
+    position: relative;
+    left: 140px;
+    font-family: "Kanit", sans-serif;
+    font-size: 2.7rem;
+    color: #cc1100;
+}
+
+.area{
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    left: 70px;
+}
+
+.area label{
+    padding: 20px;
+    position: relative;
+    right: 30px;
+    font-family: "Kanit", sans-serif; 
+}
+
+.area #hospi, #bldtype{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Kanit", sans-serif;
+    outline: none;
+    color: #F2E8C5;
+    background-color: #66443B;
+    cursor: pointer;
+}
+
+.area #bldtype{
+    position: relative;
+    right: 20px;
+}
+
+.area option:hover{
+    background: #66443B;
+}
+
+.quanti{
+    position: relative;
+    width: 250px;
+    left: 37px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: "Kanit", sans-serif;
+    color: #F2E8C5;
+    background-color: #66443B;
+    text-align: center;
+}
+
+.addFrm .submitbtn{
+    position: relative;
+    left: 110px;
+    width: 250px;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.5rem;
+    color: #F2E8C5;
+    background-color: #cc1100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addFrm .submitbtn:hover{
+    color: #F2E8C5;
+    background-color: #844341;
+    transition: 0.5s;
+}
+
+#affHospi{
+    position: absolute;
+    display: grid;
+    left: 500px;
+    top: 30px;
+}
+
+#affHospi h2, p{
+    font-family: "Kanit", sans-serif;
+}
+
+#affHospi h2{
+    font-size: 1.4rem;
+}
+
+#affHospi p{
+    font: 1em sans-serif;
+}
+
+.contactbtn1{
+    display: grid;
+    position: absolute;
+    left: 550px;
+    width: 130px;
+    padding: 10px;
+    top: 100px;
+    border: none;
+    color: #E2E2E2;
+    background: #844341;
+    cursor: pointer;
+}
+
+.contactbtn1:hover{
+    color: #844341;
+    background: #E2E2E2;
+    transition: 0.2s;
+}
+
+.contactbtn2{
+    display: grid;
+    position: absolute;
+    left: 550px;
+    top: 260px;
+    width: 130px;
+    padding: 10px;
+    border: none;
+    color: #E2E2E2;
+    background: #844341;
+    cursor: pointer;
+}
+
+.contactbtn2:hover{
+    color: #844341;
+    background: #E2E2E2;
+    transition: 0.2s;
+}
+
+.contactbtn3{
+    display: grid;
+    position: absolute;
+    left: 550px;
+    top: 410px;
+    width: 130px;
+    padding: 10px;
+    border: none;
+    color: #E2E2E2;
+    background: #844341;
+    cursor: pointer;
+}
+
+.contactbtn3:hover{
+    color: #844341;
+    background: #E2E2E2;
+    transition: 0.2s;
+}
